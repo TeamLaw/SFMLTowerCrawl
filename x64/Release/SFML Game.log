@@ -1,0 +1,55 @@
+﻿  hitbox.cpp
+c:\users\joe\dev\sfml game\sfml game\point.h(23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\sprite.h(15): error C3646: 'myHitbox': unknown override specifier
+c:\users\joe\dev\sfml game\sfml game\sprite.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\joe\dev\sfml game\sfml game\sprite.h(20): error C2065: 'Hitbox': undeclared identifier
+c:\users\joe\dev\sfml game\sfml game\sprite.h(21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\sprite.h(21): error C2614: 'Sprite': illegal member initialization: 'myHitbox' is not a base or member
+hitbox.cpp(100): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+hitbox.cpp(101): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Main.cpp
+c:\users\joe\dev\sfml game\sfml game\point.h(23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\hitbox.h(22): error C3646: 'detect_collision': unknown override specifier
+c:\users\joe\dev\sfml game\sfml game\hitbox.h(22): error C2059: syntax error: '('
+c:\users\joe\dev\sfml game\sfml game\hitbox.h(22): error C2238: unexpected token(s) preceding ';'
+c:\users\joe\dev\sfml game\sfml game\sprite.h(21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+Main.cpp(20): error C3861: 'HandleInput': identifier not found
+  sprite.cpp
+c:\users\joe\dev\sfml game\sfml game\point.h(23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\point.h(48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\joe\dev\sfml game\sfml game\hitbox.h(22): error C3646: 'detect_collision': unknown override specifier
+c:\users\joe\dev\sfml game\sfml game\hitbox.h(22): error C2059: syntax error: '('
+c:\users\joe\dev\sfml game\sfml game\hitbox.h(22): error C2238: unexpected token(s) preceding ';'
+c:\users\joe\dev\sfml game\sfml game\sprite.h(21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
