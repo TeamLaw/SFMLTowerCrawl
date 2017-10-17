@@ -1,16 +1,35 @@
 #include <SFML/Graphics.hpp>
-#include "sprite.h"
 
+#ifndef SPRITE
+#include "sprite.h"
+#endif
+
+#ifndef ROOM
+#include "room.h"
+#endif
+void DrawSprites(sf::RenderWindow);
+bool HandleInput();
+void LoadRoom();
 
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(1000, 1000), "SFML works!");
 	sf::CircleShape shape(100.f);
 	//shape.setFillColor(sf::Color::Green);
+	bool bl[4] = {true,true,true,true };
+	Room room = {Point{30,30}, 1000,1000,bl};
+	bool newRoom = true;
 
 	while (window.isOpen())
 	{
-		Sprite Person = {10,10};
+		//if (newRoom) { LoadRoom(); newRoom = false; }// Loads new room values 
+
+		Sprite Player;
+		Sprite Monster;
+		Sprite DoorNorth;
+		Sprite DoorSorth;
+
+
 
 		sf::Event event;
 		while (window.pollEvent(event))
@@ -55,4 +74,9 @@ bool HandleInput()
 		// left key is pressed: move our character
 		//character.move(1, 0);
 	}
+}
+//add to array and draws onto screen
+void LoadRoom()
+{
+
 }

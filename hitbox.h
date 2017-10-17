@@ -1,12 +1,19 @@
 #pragma once
 #ifndef HITBOX
 #define HITBOX
+
+#ifndef POINT
 #include "point.h"
+#endif
+
+#ifndef SPRITE
 #include "sprite.h"
+#endif
 
 class Hitbox
 {
 private:
+	Sprite * Parent;
 	Point topLeft;
 	Point topRight;
 	Point bottomLeft;
@@ -16,9 +23,9 @@ private:
 	int height;
 
 public:
-	Hitbox(int argWidth, int argHeight, Point *midpoint);
-	Hitbox();
-	void moveto(Point new_midpoint);
+	Hitbox(Sprite *, int, int, Point *);
+	Hitbox(void);
+	void moveto(Point);
 	Sprite detect_collision();
 
 };

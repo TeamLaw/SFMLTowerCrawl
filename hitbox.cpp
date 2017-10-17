@@ -1,7 +1,8 @@
 #include "hitbox.h"
 
 
-Hitbox::Hitbox(int argWidth, int argHeight, Point * midpoint) :
+Hitbox::Hitbox(Sprite * parent, int argWidth, int argHeight, Point * midpoint) :
+	Parent(parent),
 	width(argWidth), height(argHeight), midpoint(Point(*midpoint)),
 	topRight(midpoint->GetX() + argWidth / 2, midpoint->GetY() + argHeight / 2),
 	bottomRight(midpoint->GetX() + argWidth / 2, midpoint->GetY() - argHeight / 2),
@@ -14,6 +15,7 @@ Hitbox::Hitbox() :
 	bottomRight(0,0),
 	topLeft(0,0),
 	bottomLeft(0,0) {}
+
 void Hitbox::moveto(Point new_midpoint)
 {
 
@@ -31,7 +33,7 @@ void Hitbox::moveto(Point new_midpoint)
 
 Sprite Hitbox::detect_collision()
 {
-	Hitbox other = Hitbox(20, 20, &Point{ 40,40 });
+	Hitbox other = Hitbox(NULL,20, 20, &Point{ 40,40 });
 	bool is_other_south = false;
 	bool is_other_east = false;
 	bool collision = false;
