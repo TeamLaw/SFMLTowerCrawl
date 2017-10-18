@@ -1,5 +1,5 @@
 #include "hitbox.h"
-
+#include <stddef.h>
 
 Hitbox::Hitbox(Sprite * parent, int argWidth, int argHeight, Point * midpoint) :
 	Parent(parent),
@@ -27,13 +27,14 @@ void Hitbox::moveto(Point new_midpoint)
 	topRight.move(&movement_distance);
 	bottomLeft.move(&movement_distance);
 	bottomRight.move(&movement_distance);
-	Sprite CollidedWith = Hitbox::detect_collision();
+//	Sprite CollidedWith = Hitbox::detect_collision();
 
 }
 
-Sprite Hitbox::detect_collision()
+Sprite* Hitbox::detect_collision()
 {
-	Hitbox other = Hitbox(NULL,20, 20, &Point{ 40,40 });
+	Hitbox* a = NULL;
+	Hitbox other = Hitbox( NULL ,20, 20, &Point{ 40,40 });
 	bool is_other_south = false;
 	bool is_other_east = false;
 	bool collision = false;
@@ -101,8 +102,6 @@ Sprite Hitbox::detect_collision()
 
 	x_difference = is_other_east ? my_arrow_pt.GetX() - other_arrow_pt.GetX() : other_arrow_pt.GetX() - my_arrow_pt.GetX();
 	y_difference = !is_other_south ? my_arrow_pt.GetY() - other_arrow_pt.GetY() : other_arrow_pt.GetY() - my_arrow_pt.GetY();
-
-
 
 	if (x_difference <= 0 && y_difference <= 0) // corners hit
 	{

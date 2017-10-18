@@ -4,21 +4,17 @@
 
 #include <SFML/Graphics.hpp>
 
-#ifndef HITBOX
 #include "hitbox.h"
-#endif
-
-#ifndef POINT
 #include "point.h"
-#endif
-
 #include <list>
+class Hitbox;
+
 class Sprite
 {
 private:
 	Point MidPoint;
 	Hitbox myHitbox;
-	std::list<sf::Shape> myGraphics;
+	std::list<sf::CircleShape> myGraphics;
     std::list<Sprite *> CollidedWith;
 
 public:
