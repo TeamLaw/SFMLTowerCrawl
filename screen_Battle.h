@@ -1,7 +1,8 @@
 #include <iostream>
 #include "cScreen.h"
 #include <SFML/Graphics.hpp>
-
+#include <SFML/Graphics/Text.hpp>
+#include "GameLogic.h"
 class screen_Battle : public cScreen
 {
 private:

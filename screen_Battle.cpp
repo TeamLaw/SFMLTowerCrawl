@@ -1,6 +1,5 @@
 #include "screen_Battle.h"
 
-
 screen_Battle::screen_Battle(void)
 {
 	alpha_max = 3 * 255;
@@ -10,6 +9,7 @@ screen_Battle::screen_Battle(void)
 
 int screen_Battle::Run(sf::RenderWindow &App)
 {
+	int Health = game::GameLogic::THE_PLAYER.health;
 	playing = true;
 	sf::CircleShape shape(50.f,10);
 	shape.setFillColor(sf::Color::Red);
@@ -19,25 +19,19 @@ int screen_Battle::Run(sf::RenderWindow &App)
 	{
 		// error...
 	}
-	sf::Text Menu1;
-	sf::Text Menu2;
-	sf::Text Menu3;
+	sf::Text attack;
+	attack.setPosition(200, 200);
+	attack.setString("ATTACK!");
+	attack.setFont(font);
+	attack.setCharacterSize(30);
+	attack.setFillColor(sf::Color::Black);
+	
+	sf::Text mouse;
+	mouse.setPosition(300, 300);
 
-	//Menu1.setFont(sf::Font());
-	Menu1.setFont(font);
-	Menu1.setCharacterSize(20);
-	Menu1.setString("Play");
-	Menu1.setPosition({ 280.f, 160.f });
-
-	//Menu2.setFont(sf::Font());
-	Menu2.setCharacterSize(20);
-	Menu2.setString("Exit");
-	Menu2.setPosition({ 280.f, 220.f });
-
-	//Menu3.setFont(sf::Font());
-	Menu3.setCharacterSize(20);
-	Menu3.setString("Continue");
-	Menu3.setPosition({ 280.f, 160.f });
+	mouse.setFont(font);
+	mouse.setCharacterSize(30);
+	mouse.setFillColor(sf::Color::Black);
 
 	sf::Event event;
 	while (App.isOpen())
@@ -51,16 +45,18 @@ int screen_Battle::Run(sf::RenderWindow &App)
 				App.close();
 			//bool ismove = HandleInput();
 		}
-
-
-
+		sf::Vector2i pos = sf::Mouse::getPosition();
+		std::string s = "Mouse is " + std::to_string(pos.x) + (std::string)" ," + std::to_string(pos.y);
+		pos = sf::Mouse::getPosition(App);
+		std::string s2 = "Mouse is " + std::to_string(pos.x) + (std::string)" ," + std::to_string(pos.y);
+		mouse.setString(s + s2);
 		App.clear(sf::Color::White);
-		App.draw(Menu1);
-		App.draw(Menu2);
+		App.draw(mouse);
+		App.draw(attack);
 		//App.draw(shape);
 		App.display();
 
 	}
 
-	return 0;
+	return EXIT_SUCCESS;
 }
