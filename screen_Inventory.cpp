@@ -13,5 +13,9 @@ screen_Inventory::screen_Inventory(void)
 int screen_Inventory::Run(sf::RenderWindow &App)
 {
 	//JOE ASSIGNED TO BUILD LOGIC
-	return START_BATTLE;
+	if (1)
+	{
+		return START_BATTLE;
+	}
+	
 }
