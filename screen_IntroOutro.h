@@ -10,5 +10,6 @@ private:
 	bool playing;
 public:
 	screen_IntroOutro(void);
-	virtual int Run(sf::RenderWindow &App);
+	int Run(sf::RenderWindow &App, bool);
+	virtual int Run(sf::RenderWindow &App) { return 0; };
 };
