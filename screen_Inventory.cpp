@@ -2,6 +2,7 @@
 #define START_BATTLE 2
 
 #include "screen_Inventory.h"
+#include "GameLogic.h"
 
 screen_Inventory::screen_Inventory(void)
 {
@@ -28,7 +29,7 @@ int screen_Inventory::Run(sf::RenderWindow &window)
 	auto exp		= game::GameLogic::THE_PLAYER.exp;
 	//auto experience = game::GameLogic::THE_PLAYER.experience;
 	auto level		= game::GameLogic::THE_PLAYER.level;
-	auto marker     = game::GameLogic::THE_PLAYER.marker;
+	//auto marker     = game::GameLogic::THE_PLAYER.marker;
 	
 	auto money      = game::GameLogic::THE_PLAYER.money;
 	auto name       = game::GameLogic::THE_PLAYER.name;
@@ -45,9 +46,9 @@ int screen_Inventory::Run(sf::RenderWindow &window)
 	s.append("[-] Damage: ");		s.append(std::to_string(damage));    s.append("\n");
 	s.append("[-] Exp: ");			s.append(std::to_string(exp));       s.append("\n");
 	s.append("[-] Level: ");		s.append(std::to_string(level));     s.append("\n");
-	s.append("[-] Marker: ");		s.append(std::to_string(marker));    s.append("\n");
+	//s.append("[-] Marker: ");		s.append(std::to_string(marker));    s.append("\n");
 	s.append("[-] Money: ");		s.append(std::to_string(money));     s.append("\n");
-	s.append("[-] Name: ");			s.append(name);						 s.append("\n");
+//	s.append("[-] Name: ");			s.append(name);						 s.append("\n");
 
 	//-------------------------- font stuff ---------------------------------//
 	if (!font.loadFromFile("OpenSans-Regular.ttf"))
