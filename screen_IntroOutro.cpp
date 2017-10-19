@@ -33,7 +33,7 @@ void screen_IntroOutro::RunIntro(sf::RenderWindow &App)
 			std::cerr << "Error font.loadFromFile('OpenSans - Regular.ttf')" << std::endl;
 		}
 		sf::Text display_intro;
-		display_intro.setPosition(200, 200);
+		display_intro.setPosition(0.f, 0.f);
 		display_intro.setString("Welcome to Tower Crawl!");
 		display_intro.setFont(font);
 		display_intro.setCharacterSize(30);

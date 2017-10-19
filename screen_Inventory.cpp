@@ -2,6 +2,9 @@
 #define START_BATTLE 2
 
 #include "screen_Inventory.h"
+#include "GameLogic.h"
+
+using namespace game;
 
 screen_Inventory::screen_Inventory(void)
 {
