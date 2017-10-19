@@ -28,7 +28,9 @@ int main(int argc, char** argv)
 	bool GameEnd = false;
 	
 	//USE for Testing a certain window
+	//sB.Run(App);
 	//sM.Run(App);
+	//sB.Run(App);
 	//GameEnd = true;
 	
 
@@ -52,7 +54,6 @@ int main(int argc, char** argv)
 				  sB.Run(App);
 				  if (game::GameLogic::THE_PLAYER.health)
 				  {
-
 				  }
 				break;
 			}

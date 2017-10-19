@@ -42,7 +42,7 @@ int screen_Battle::Run(sf::RenderWindow &App)
 		while (App.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
-				App.close();
+				return EXIT_SUCCESS;
 			//bool ismove = HandleInput();
 		}
 		sf::Vector2i pos = sf::Mouse::getPosition();
