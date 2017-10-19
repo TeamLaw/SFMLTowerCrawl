@@ -10,5 +10,5 @@ private:
 	bool playing;
 public:
 	screen_Inventory(void);
-	virtual int Run(sf::RenderWindow &App);
+	virtual int Run(sf::RenderWindow &App, bool);
 };

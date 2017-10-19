@@ -22,7 +22,7 @@ int main(int argc, char** argv)
 	//Screens preparations 
 	screen_Main sM; 
 	screen_Battle sB;
-	screen_Inventory sI;
+	//screen_Inventory sI;
 
 	//Build player class 
 	bool GameEnd = false;
@@ -47,7 +47,7 @@ int main(int argc, char** argv)
 				break;
 
 			  case CHECK_INVENTORY:
-				  sI.Run(App);
+				  //sI.Run(App);
 				break;
 
 			  case START_BATTLE:

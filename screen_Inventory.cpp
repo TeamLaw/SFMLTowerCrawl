@@ -10,8 +10,12 @@ screen_Inventory::screen_Inventory(void)
 	playing = false;
 }
 
-int screen_Inventory::Run(sf::RenderWindow &App)
+int screen_Inventory::Run(sf::RenderWindow &App, bool)
 {
 	//JOE ASSIGNED TO BUILD LOGIC
-	return START_BATTLE;
+	if (1)
+	{
+		return START_BATTLE;
+	}
+	
 }
