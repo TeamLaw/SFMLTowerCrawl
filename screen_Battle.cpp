@@ -32,24 +32,30 @@ int screen_Battle::Run(sf::RenderWindow &App)
 	mouse.setFont(font);
 	mouse.setCharacterSize(30);
 	mouse.setFillColor(sf::Color::Black);
-
+	std::string s3 = "";
 	sf::Event event;
 	while (App.isOpen())
 	{
-		//shape.move(1, 1);
-		//if (newRoom) { LoadRoom(); newRoom = false; }// Loads new room values 
+		sf::Vector2i pos = sf::Mouse::getPosition();
+		std::string s = "Mouse is " + std::to_string(pos.x) + (std::string)" ," + std::to_string(pos.y);
+		pos = sf::Mouse::getPosition(App);
+		std::string s2 = "Mouse is " + std::to_string(pos.x) + (std::string)" ," + std::to_string(pos.y);
+
 
 		while (App.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
 				return EXIT_SUCCESS;
+
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))//Mouse Clicked
+			{
+				sf::Vector2i pos3 = sf::Mouse::getPosition(App);
+				s3 = "Mouse clicked at " + std::to_string(pos3.x) + (std::string)" ," + std::to_string(pos3.y);
+			}
+
 			//bool ismove = HandleInput();
 		}
-		sf::Vector2i pos = sf::Mouse::getPosition();
-		std::string s = "Mouse is " + std::to_string(pos.x) + (std::string)" ," + std::to_string(pos.y);
-		pos = sf::Mouse::getPosition(App);
-		std::string s2 = "Mouse is " + std::to_string(pos.x) + (std::string)" ," + std::to_string(pos.y);
-		mouse.setString(s + s2);
+		mouse.setString(s + s2 + s3);
 		App.clear(sf::Color::White);
 		App.draw(mouse);
 		App.draw(attack);
