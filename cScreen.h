@@ -1,6 +1,5 @@
 #ifndef  C_SCREEN
 #define C_SCREEN
-
 #include "SFML\Graphics\RenderWindow.hpp"
 
 class cScreen

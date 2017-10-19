@@ -1,3 +1,7 @@
+#define CHECK_INVENTORY 1
+#define START_BATTLE 2
+#define WIN_GAME 3
+#define LOSE_GAME 4
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "screens.h"
@@ -5,6 +9,7 @@
 int main(int argc, char** argv)
 {
 	//Applications variables
+
 	std::vector<cScreen*> Screens;
 	int screen = 0;
 
@@ -14,18 +19,43 @@ int main(int argc, char** argv)
 	//Mouse cursor no more visible
 	App.setMouseCursorVisible(true);
 
-	//Screens preparations -----comment out all but the one you are working on to test
-	//screen_Main sM; 
-	//Screens.push_back(&sM);
+	//Screens preparations 
+	screen_Main sM; 
 	screen_Battle sB;
-	Screens.push_back(&sB);
-	//screen_Inventory sI;
-	//Screens.push_back(&sI);
+	screen_Inventory sI;
+
+	//Build player class 
+	bool GameEnd = false;
+	
+	//USE for Testing a certain window
+	//sM.Run(App);
+	//GameEnd = true;
+	
 
 	//Main loop
-	while (screen >= 0)//screens will run in the order they are arrranged
+	while (!GameEnd)//screens will run in the order they are arrranged
 	{
-		screen = Screens[screen]->Run(App);
+		int result = sM.Run(App);
+          switch(result)
+			{
+
+			  case EXIT_SUCCESS:
+				GameEnd = true;
+				return 0;
+				break;
+
+			  case CHECK_INVENTORY:
+				  sI.Run(App);
+				break;
+
+			  case START_BATTLE:
+				  sB.Run(App);
+				  if (game::GameLogic::THE_PLAYER.health)
+				  {
+
+				  }
+				break;
+			}
 	}
 
 	return EXIT_SUCCESS;
