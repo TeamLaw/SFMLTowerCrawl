@@ -28,10 +28,10 @@ int main(int argc, char** argv)
 	bool GameEnd = false;
 	
 	//USE for Testing a certain window
-	sB.Run(App);
-	sM.Run(App);
-	sB.Run(App);
-	GameEnd = true;
+	//sB.Run(App);
+	//sM.Run(App);
+	//sB.Run(App);
+	//GameEnd = true;
 	
 
 	//Main loop
