@@ -9,11 +9,23 @@ screen_Battle::screen_Battle(void)
 
 int screen_Battle::Run(sf::RenderWindow &App)
 {
+	App.setTitle("Fight!");
+	//get player health
 	int Health = game::GameLogic::THE_PLAYER.health;
 	playing = true;
+
+	sf::RectangleShape Player;
+	sf::Texture texPlayer;
+	if (!texPlayer.loadFromFile("knight.jpg"))
+	{
+		std::cerr << "Knight didnt load";
+	}
+	Player.setTexture(&texPlayer, true);
+	Player.setPosition(20, 800);
+
 	sf::CircleShape shape(50.f,10);
 	shape.setFillColor(sf::Color::Red);
-	App.setTitle("BATTLE!");
+
 	sf::Font font;
 	if (!font.loadFromFile("OpenSans-Regular.ttf"))
 	{
@@ -60,6 +72,7 @@ int screen_Battle::Run(sf::RenderWindow &App)
 		App.draw(mouse);
 		App.draw(attack);
 		//App.draw(shape);
+		App.draw(Player);
 		App.display();
 
 	}

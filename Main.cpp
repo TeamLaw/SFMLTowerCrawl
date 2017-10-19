@@ -14,7 +14,7 @@ int main(int argc, char** argv)
 	int screen = 0;
 
 	//Window creation
-	sf::RenderWindow App(sf::VideoMode(1500, 1500, 32), "TowerCrawl");
+	sf::RenderWindow App(sf::VideoMode(1000, 1000, 32), "TowerCrawl");
 
 	//Mouse cursor no more visible
 	App.setMouseCursorVisible(true);
@@ -23,6 +23,7 @@ int main(int argc, char** argv)
 	screen_Main sM; 
 	screen_Battle sB;
 	screen_Inventory sI;
+	screen_IntroOutro sIO;
 
 	//Build player class 
 	bool GameEnd = false;
@@ -33,6 +34,8 @@ int main(int argc, char** argv)
 	//sB.Run(App);
 	//GameEnd = true;
 	
+	//Display intro sequence
+	sIO.Run(App, true);
 
 	//Main loop
 	while (!GameEnd)//screens will run in the order they are arrranged
@@ -54,6 +57,7 @@ int main(int argc, char** argv)
 				  sB.Run(App);
 				  if (game::GameLogic::THE_PLAYER.health)
 				  {
+					  sIO.Run(App, false);
 				  }
 				break;
 			}

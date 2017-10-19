@@ -3,28 +3,25 @@
 
 using namespace game;
 
-
-Player GameLogic::THE_PLAYER = Player{};
-static Room * delPointers[1000];
-static int delCounter;
-static Room * floorStart;
-static Room * floorEnd;
-static Player player;
-static NPC shopkeeper;
-static NPC innkeeper;
-static NPC blacksmith;
-static time_t t;
-static int difficulty;
-static int branch;
-static int location;
+Player GameLogic::THE_PLAYER = Player{(std::string) "Player",COORD{0,0} ,0,0,0,0,0,0 };
+Room *  GameLogic::delPointers[1000];
+int  GameLogic::delCounter;
+Room *  GameLogic::floorStart;
+Room *  GameLogic::floorEnd;
+Player  GameLogic::player;
+time_t  GameLogic::t;
+int  GameLogic::difficulty;
+int  GameLogic::branch;
+int  GameLogic::location;
 
 GameLogic::GameLogic()
 {
+
 }
 
 Enemy GameLogic::FightingWith()
 {
-	return Enemy{};
+	return Enemy{ "Guy",COORD{0,0},1,1,1,1,1,1 };
 }
 
 GameLogic::~GameLogic()

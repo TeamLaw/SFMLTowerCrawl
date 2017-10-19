@@ -14,5 +14,4 @@ public:
 	virtual int Run(sf::RenderWindow &App) { return 0; };
 	void screen_IntroOutro::RunIntro(sf::RenderWindow &App);
 	void screen_IntroOutro::RunOutro(sf::RenderWindow &App);
-
 };
