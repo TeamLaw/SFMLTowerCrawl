@@ -4,6 +4,7 @@
 #include "screen_Inventory.h"
 #include "GameLogic.h"
 
+
 screen_Inventory::screen_Inventory(void)
 {
 	alpha_max = 3 * 255;
