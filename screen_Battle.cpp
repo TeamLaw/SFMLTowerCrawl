@@ -14,6 +14,7 @@ int screen_Battle::Run(sf::RenderWindow &App)
 	int Health = game::GameLogic::THE_PLAYER.health;
 	playing = true;
 
+	//PLAYER SHAPE-----------------------------------------
 	sf::RectangleShape Player;
 	sf::Texture texPlayer;
 	if (!texPlayer.loadFromFile("knight.jpg"))
@@ -21,7 +22,11 @@ int screen_Battle::Run(sf::RenderWindow &App)
 		std::cerr << "Knight didnt load";
 	}
 	Player.setTexture(&texPlayer, true);
+	Player.setSize(sf::Vector2f( 200.f,200.f ));
+	Player.setOutlineColor(sf::Color::Red);
+	Player.setOutlineThickness(5);
 	Player.setPosition(20, 800);
+	//end PLAYER SHAPE--------------------------------------
 
 	sf::CircleShape shape(50.f,10);
 	shape.setFillColor(sf::Color::Red);
